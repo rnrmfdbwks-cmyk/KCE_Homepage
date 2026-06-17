@@ -1468,3 +1468,31 @@ header:has(.mega-menu:focus-within)::after {
     display: block;
   }
 }
+
+.pc-comma {
+  display: inline;
+}
+
+@media (max-width: 980px) {
+  .pc-comma {
+    display: none;
+  }
+}
+@media (max-width: 980px) {
+  .product-card .badge-item {
+    width: 150px;
+    height: 48px;
+  }
+
+  .product-card .badge-item img {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    padding: 7px;
+  }
+
+  .product-card .badge-item span {
+    font-size: 14px !important;
+    padding-right: 10px;
+  }
+}
