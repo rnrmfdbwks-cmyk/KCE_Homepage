@@ -1,0 +1,262 @@
+
+
+/* 🔹 서브네브 */
+.about-subnav-wrap {
+  padding-bottom: 12px;
+}
+
+
+
+/* =========================
+   CERT PAGE
+========================= */
+
+.cert-page section {
+  padding: 80px 0;
+}
+
+/* 상단 */
+.cert-hero {
+  background: linear-gradient(135deg, #0b5cab, #1d70c9);
+  color: white;
+  padding: 100px 0;
+}
+
+.cert-hero h1 {
+  font-size: 44px;
+}
+
+
+.cert-track {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  overflow: visible !important;
+}
+
+.cert-track img {
+  width: 100%;         
+  height: 240px;         
+  object-fit: contain;   /* 글자 잘리면 안 되니까contain */
+  border-radius: 16px;
+  flex-shrink: 0;
+  padding: 10px;
+  border: 1px solid #dbe3ee;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* 버튼 */
+.slider-btn {
+  display: none !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(11, 92, 171, 0.95);   /* 흰 사진 위에서도 보이게 파란색 */
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  z-index: 5;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.slider-btn:hover {
+  background: #084887;
+  transform: translateY(-50%) scale(1.06);
+}
+
+/* 스크롤바 숨김 */
+.cert-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   차량방호울타리만 2줄
+========================= */
+
+.cert-section--double .cert-track {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  overflow-x: visible;   /* 2줄 배치는 가로 스크롤 안 쓰는 편이 자연스러움 */
+}
+
+.cert-section--double .cert-track img {
+  width: 100%;
+  height: 240px;
+}
+
+/* 차량방호울타리 2줄 배치에서는 버튼 숨김 */
+.cert-section--double .slider-btn {
+  display: none;
+}
+
+/* =========================
+   반응형
+========================= */
+
+@media (max-width: 1280px) {
+  .cert-section--double .cert-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .cert-track img {
+    width: 240px;
+    height: 340px;
+  }
+
+  .cert-section--double .cert-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cert-section--double .cert-track img {
+    width: 100%;
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cert-slider {
+    padding: 0 40px;
+  }
+
+  .cert-track {
+    gap: 14px;
+  }
+
+  .cert-track img {
+    width: 200px;
+    height: 290px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cert-section--double .cert-track {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-section--double .cert-track img {
+    height: auto;
+    max-height: 420px;
+  }
+}
+.cert-card {
+  flex: 0 0 280px;
+}
+
+.cert-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.cert-caption {
+  margin: 10px 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .cert-track {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cert-track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cert-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.cert-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card .cert-caption {
+  order: -1;
+  margin: 0 4px 12px;
+  min-height: 48px;   /* 2줄까지 버티게 고정 */
+  display: flex;
+  align-items: flex-end;   /* 글자를 아래쪽 기준으로 맞춤 */
+  justify-content: center;
+  text-align: center;
+}
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: min(90%, 1100px);
+  height: 1px;
+
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.4),
+    transparent
+  );
+}
+
+.cert-section .container {
+  position: relative;
+  padding-bottom: 100px; /* 여유 */
+}
+
+.cert-section .container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: min(88%, 1100px);
+  height: 1px;
+
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 163, 184, 0.4),
+    transparent
+  );
+}
+.cert-section:last-of-type {
+  border-bottom: none;
+}
+.cert-section + .cert-section {
+  margin-top: -50px;   /* 값으로 간격 조절 */
+}

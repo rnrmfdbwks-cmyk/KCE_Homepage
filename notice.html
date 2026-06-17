@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공지사항 | KCE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="notice.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpg" alt="KCE 로고">
+        <small>KOREA CIVIL & ENVIRONMENT</small>
+      </a>
+
+      <nav class="menu mega-menu">
+        <div class="menu-top">
+          <div class="menu-group">
+            <a href="product_1.html" class="menu-main">제품소개</a>
+            <div class="submenu-list">
+              <a href="product_1.html">차량방호책</a>
+              <a href="product_2.html">교량용 펜스</a>
+              <a href="product_3.html">보행자용 펜스</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a href="about.html" class="menu-main">회사소개</a>
+            <div class="submenu-list">
+              <a href="about.html">KCE는...</a>
+              <a href="patent.html">인증</a>
+            </div>
+          </div>
+
+          <div class="menu-group">
+            <a href="notice.html" class="menu-main">고객지원</a>
+            <div class="submenu-list">
+              <a href="notice.html">자료실</a>
+              <a href="location.html">오시는길</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="notice-page">
+    <section class="notice-hero">
+      <div class="container">
+        <h1 class="notice-page-title">자료실</h1>
+        <div class="notice-breadcrumb">
+          <a href="index.html">Home</a>
+          <span>&gt;</span>
+          <span>고객지원</span>
+          <span>&gt;</span>
+          <strong>자료실</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice-board-section">
+      <div class="container">
+        <div class="notice-toolbar">
+          <div class="notice-toolbar-left"></div>
+
+          <form class="notice-search" action="#" method="get">
+            <select name="searchType">
+              <option value="all">전체</option>
+              <option value="title">제목</option>
+              <option value="writer">작성자</option>
+            </select>
+            <input type="text" name="keyword" placeholder="검색어를 입력하세요">
+            <button type="submit" aria-label="검색">🔍</button>
+          </form>
+        </div>
+
+        <div class="notice-table-wrap">
+            <table class="notice-table">
+                <colgroup>
+                    <col style="width: 90px;">
+                    <col>
+                    <col style="width: 140px;">
+                    <col style="width: 140px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                    <th>글 번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>1</td>
+                    <td class="notice-title-cell">
+                        <a href="files/main_catalog.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer" >
+                         차량방호책 카달로그 다운로드
+                        </a>
+                        <span class="file-badge">PDF</span>
+                    </td>
+                    <td>관리자</td>
+                    <td>2026-04-10</td>
+                    </tr>
+
+                    <tr>
+                    <td>2</td>
+                    <td class="notice-title-cell">
+                        <a href="files/main_catalog2.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer" >
+                          교량난간, 디자인울타리 카달로그 다운로드
+                        </a>
+                        <span class="file-badge">PDF</span>
+                    </td>
+                    <td>관리자</td>
+                    <td>2026-04-10</td>
+                    </tr>
+
+                    <tr>
+                    <!--<td>3</td>
+                    <td class="notice-title-cell">
+                        <a href="files/KCE_제품사양서.zip" download>
+                        제품 사양서 모음
+                        </a>
+                        <span class="file-badge">ZIP</span>
+                    </td>
+                    <td>관리자</td>
+                    <td>2026-04-07</td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="notice-pagination">
+          <a href="#" class="page-arrow">&lt;</a>
+          <a href="#" class="active">1</a>
+          <a href="#" class="page-arrow">&gt;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+        <div class="container footer-row">
+        <div class="footer-info-row">
+          <div class="footer-item">
+            <strong>(주)케이씨이엔지니어링</strong>
+          </div>
+
+          <div class="footer-item">
+            <span class="label">본사</span>
+            <span class="value">경기도 성남시 수정구 성남대로 1330, 205호</span>
+          </div>
+
+          <div class="footer-item">
+            <span class="label">공장</span>
+            <span class="value">경기도 파주시 적성면 국사로 72-20</span>
+          </div>
+
+          <div class="footer-item">
+            <span class="label">Tel</span>
+            <span class="value">031-697-8948</span>
+          </div>
+
+          <div class="footer-item">
+            <span class="label">Email</span>
+            <span class="value">kce1700@daum.net</span>
+          </div>
+        </div>
+      <div>© 2026 KCE. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

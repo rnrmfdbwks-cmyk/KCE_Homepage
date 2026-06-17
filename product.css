@@ -1,0 +1,2226 @@
+/* =========================
+   PRODUCT 공통
+========================= */
+
+/* 전체 페이지 */
+.product-page section {
+  padding: 80px 0;
+}
+
+/* 상단 배너 */
+.product-hero {
+  color: white;
+  padding: 110px 0 96px; /* 서브네브가 위로 빠지므로 상단 여백 살짝 확보 */
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-hero-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-1-page .product-hero {
+  padding: 110px 0 170px !important;
+  background:
+    linear-gradient(rgba(15,23,42,0), rgba(15,23,42,0)),
+    url("images/jong.png") center/cover no-repeat;
+}
+
+.product-2-page .product-hero {
+  
+  padding: 110px 0 170px !important;
+  background:
+    linear-gradient(rgba(15,23,42,0), rgba(15,23,42,0)),
+    url("images/product2_1.jpg") center/cover no-repeat;
+}
+
+.product-3-page .product-hero {
+  padding: 110px 0 170px !important;
+  background:
+    linear-gradient(rgba(15,23,42,0), rgba(15,23,42,0)),
+    url("images/D1.jpg") center/cover no-repeat !important;
+}
+
+.product-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.product-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+/* 제목 */
+.section-title {
+  margin-bottom: 12px;
+  font-size: 36px;
+  color: #0f172a;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #0b5cab;
+  margin-top: 10px;
+}
+
+/* =========================
+   PRODUCT 1 (차량방호책)
+========================= */
+
+/* 메인 이미지 */
+.product-main-visual img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* 시공 갤러리 */
+.project-gallery {
+  padding-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-gallery-section > .container {
+  padding-top: 0;
+}
+
+.gallery-card {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* =========================================
+   PRODUCT 1 인증 섹션 - CSS만으로 재배치
+   HTML 수정 거의 없이 1행 5열 느낌으로 정리
+========================================= */
+
+.product-1-page .cert-layout {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.product-1-page .cert-sub-grid {
+  display: contents;
+}
+
+
+/* 기존 테스트용 색 제거 */
+.product-1-page .cert-source,
+.product-1-page .cert-image-main {
+  background-color: transparent;
+}
+
+
+
+.product-1-page .cert-source {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.product-1-page .cert-source2 {
+  margin-top: 1px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.product-1-page .cert-source img {
+  height: 28px;
+}
+
+.product-1-page .cert-source2 img {
+  height: 34px;
+}
+
+
+
+
+
+/* 5개 카드 */
+.product-1-page .cert-item {
+  padding: 6px 16px 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.product-1-page .cert-image img {
+  width: 100%;
+  height: 120px;
+
+  object-fit: contain;
+}
+.product-1-page .cert-image1 img {
+  width: 100%;
+  height: 90px;
+  margin: 16px 0 16px;
+  object-fit: contain;
+}
+
+.product-1-page .cert-image2 img {
+  width: 100%;
+  height: 100px;
+  margin: 16px 0 16px;
+  object-fit: contain;
+}
+.product-1-page .cert-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #0f172a;
+  word-break: keep-all;
+}
+
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .product-1-page .cert-layout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .product-1-page .cert-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .product-1-page .cert-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   PRODUCT 2 (교량용 펜스)
+========================= */
+
+/* 갤러리 */
+.product-2-page .gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.product-2-page .gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* 강조 영역 */
+.product-2-page .highlight-section {
+  color: white;
+  text-align: center;
+}
+
+
+/* 경고 영역 */
+.product-2-page .warning-section {
+  background: #f8fafc;
+}
+
+.product-2-page .warning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.product-2-page .warning-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.product-2-page .warning-text h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.product-2-page .warning-strong {
+  font-weight: 700;
+  color: #0b5cab;
+}
+
+/* =========================
+   PRODUCT 3 (디자인 울타리)
+========================= */
+
+.product-3-page .type-section {
+  padding: 80px 0;
+}
+
+.product-3-page .type-section.alt {
+  background: #f8fafc;
+}
+
+
+/* 1번 섹션만 인증 포함 3단 구조 */
+.product-3-page .type-box-cert {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.product-3-page .type-cert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-3-page .cert-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-3-page .cert-mark img {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+}
+
+.product-3-page .cert-mark p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+
+.product-3-page .type-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.product-3-page .type-sub {
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.product-3-page .type-number {
+  font-weight: 800;
+  color: #0b5cab;
+}
+
+.product-3-page .type-text p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+
+/* 이미지 */
+.product-3-page .type-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+
+/* =========================
+   PRODUCT 서브메뉴
+   메인 헤더 톤에 맞춘 텍스트형
+========================= */
+
+.product-subnav-wrap {
+  margin: 0;
+  padding: 18px 0 0;
+}
+
+.product-subnav-wrap.inside {
+  margin: 0;
+  padding: 14px 0 0;
+}
+
+.product-subnav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.product-subnav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.72);
+
+  transition: color 0.22s ease, transform 0.22s ease;
+}
+
+/* 구분선 */
+.product-subnav-item:not(:last-child) {
+  margin-right: 14px;
+  padding-right: 14px;
+}
+
+.product-subnav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%);
+}
+
+.product-subnav-item:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.product-subnav-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* active 밑줄 */
+.product-subnav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+}
+
+/* =========================
+   반응형
+========================= */
+
+@media (max-width: 900px) {
+  .product-subnav-wrap {
+    padding: 12px 0 0;
+  }
+
+  .product-subnav-wrap.inside {
+    padding: 10px 0 0;
+  }
+
+  .product-subnav {
+    row-gap: 8px;
+  }
+
+  .product-subnav-item {
+    font-size: 14px;
+  }
+
+  .product-subnav-item:not(:last-child) {
+    margin-right: 12px;
+    padding-right: 12px;
+  }
+
+  .product-subnav-item.active::before {
+    bottom: -4px;
+  }
+}
+
+/* =========================
+   인증 섹션 배경
+========================= */
+
+
+.cert-bg {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+.product-gallery-section {
+  background: #ffffff;
+}
+
+/* =========================
+   제품 상세 (초기화 버전)
+========================= */
+
+.product-detail-section {
+  background: #ffffff;
+}
+
+.product-detail-wrap {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* 좌측 */
+.product-info {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.product-info h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.product-code {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.product-spec p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.product-spec .sub {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* 우측 리스트 */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* 카드 */
+.product-item {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* 모델명 */
+.model-name {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* 이미지 */
+.product-thumb {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 번호 */
+.product-id {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b5cab;
+}
+
+/* 🔥 다 지움 */
+.product-overlay,
+.product-item::after {
+  display: none !important;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .product-detail-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mall-title {
+  display: flex;
+  /* justify-content: center;   가운데 정렬 */
+  align-items: center;
+  margin-bottom: 24px;
+  margin-bottom: 60px;
+}
+
+.mall-title img {
+  height: 60px;              /* 크기 조절 */
+  width: auto;
+  object-fit: contain;
+
+}
+.cert-section3 {
+  background: #ffffff;
+}
+/* =========================
+   PRODUCT 2 비교 섹션
+========================= */
+
+.product-2-page .compare-section {
+  background: #ffffff;
+}
+
+.product-2-page .compare-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.product-2-page .compare-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.product-2-page .compare-card-kce {
+  border-color: rgba(11, 92, 171, 0.22);
+  box-shadow: 0 18px 36px rgba(11, 92, 171, 0.08);
+}
+
+.product-2-page .compare-head {
+  margin-bottom: 18px;
+}
+
+.product-2-page .compare-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 30px;
+  padding: 0 12px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0b5cab;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.product-2-page .compare-card-other .compare-label {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.product-2-page .compare-head h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.product-2-page .compare-images {
+  display: grid;
+  gap: 16px;
+}
+
+.product-2-page .compare-images.two {
+  grid-template-columns: 1fr;
+}
+
+
+.product-2-page .compare-images.one {
+  grid-template-columns: 1fr;
+}
+
+.product-2-page .compare-image-box {
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8fafc;
+  height: 260px;        /* 원하는 높이 */
+}
+
+.product-2-page .compare-image-box1_2 {
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8fafc;
+  height: 260px;        /* 원하는 높이 */
+}
+
+
+.product-2-page .compare-image-box2 {
+  margin:0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.product-2-page .compare-image-box img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-2-page .compare-image-box-large img {
+  height: 420px;
+}
+
+.product-2-page .compare-points {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  gap: 12px;
+}
+
+.product-2-page .compare-point {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+.product-2-page .compare-point strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #0f172a;
+  word-break: keep-all;
+}
+
+@media (max-width: 900px) {
+  .product-2-page .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-2-page .compare-images.two {
+    grid-template-columns: 1fr;
+  }
+
+  .product-2-page .compare-image-box img,
+  .product-2-page .compare-image-box-large img {
+    height: 280px;
+  }
+}
+/* =========================
+   나라장터 - 이미지 없는 버전
+========================= */
+
+.product-list-simple {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.simple-arrow{
+  text-align: right;
+  display: block;  
+  width: 100%;
+  padding-right: 6px;
+  margin-bottom: 22px;
+}
+
+.simple-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+
+.product-item-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+}
+
+.product-item-simple:hover {
+  transform: translateY(-4px);
+  border-color: #0b5cab;
+  box-shadow: 0 16px 32px rgba(11, 92, 171, 0.12);
+}
+
+.simple-text .model-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.simple-text .product-id {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.simple-arrow {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b5cab;
+  transition: transform 0.2s ease;
+}
+
+.product-item-simple:hover .simple-arrow {
+  transform: translateX(4px);
+}
+
+/* product3에서만 나라장터 스타일 수정 */
+.product-3-page .cert-section3 {
+  background: transparent;   /* 흰 배경 제거 */
+  padding-top: 20px;
+}
+
+/* =========================================
+   PRODUCT 3 전용 리디자인
+   - product 1,2 영향 없음
+   - 기존 product3 레이아웃만 정리
+========================================= */
+
+/* 전체 톤 */
+.product-3-page {
+  background: #f8fafc;
+}
+
+.product-3-page .product-page section {
+  padding: 96px 0;
+}
+
+/* 히어로 */
+.product-3-page .product-hero {
+  padding: 120px 0 88px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.72)),
+    url("images/D1.jpg") center center / cover no-repeat;
+}
+
+.product-3-page .product-subnav-wrap.inside {
+  padding-top: 0;
+  margin-bottom: 26px;
+}
+
+.product-3-page .product-hero h1 {
+  max-width: 720px;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+/* 1번 섹션 */
+.product-3-page .type-section {
+  background: #f8fafc;
+}
+
+.product-3-page .type-section > .container {
+  max-width: 1240px;
+}
+
+.product-3-page .type-box-cert {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  grid-template-areas:
+    "text image"
+    "cert image";
+  gap: 28px 44px;
+  align-items: stretch;
+
+  padding: 42px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+  border: 1px solid #e7edf5;
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.07);
+}
+
+.product-3-page .type-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.product-3-page .type-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0b5cab;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.product-3-page .type-text h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.product-3-page .type-sub {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.product-3-page .type-text .highlight {
+  display: inline-block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #f1f7ff;
+  color: #0b5cab;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+
+
+/* 인증마크 - 세로좁은 칸 제거하고 가로 카드형으로 */
+.product-3-page .type-cert {
+  grid-area: cert;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.product-3-page .cert-mark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+
+  min-height: 108px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  text-align: left;
+}
+
+.product-3-page .cert-mark img {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  object-fit: contain;
+  filter: none;
+}
+
+.product-3-page .cert-mark p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #0f172a;
+}
+
+.product-3-page .type-image {
+  grid-area: image;
+  height: 100%;
+}
+
+.product-3-page .type-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  border-radius: 28px;
+  display: block;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.10);
+}
+
+/* 나라장터 섹션 */
+.product-3-page .cert-section3 {
+  background: transparent;
+  padding-top: 42px;
+  padding-bottom: 0;
+}
+
+.product-3-page .cert-section3 > .container {
+  padding: 32px 36px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.product-3-page .mall-title {
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+
+.product-3-page .mall-title img {
+  height: 56px;
+  width: auto;
+}
+
+.product-3-page .product-detail-wrap {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.product-3-page .product-info {
+  border-radius: 24px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.product-3-page .product-info h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.product-3-page .product-code {
+  margin: 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+.product-3-page .product-list.product-list-simple {
+  gap: 14px;
+}
+
+.product-3-page .product-item-simple {
+  min-height: 92px;
+  padding: 20px 22px;
+  border-radius: 20px;
+}
+
+.product-3-page .simple-text .model-name {
+  font-size: 18px;
+}
+
+.product-3-page .simple-text .product-id {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.product-3-page .simple-arrow {
+  font-size: 22px;
+}
+
+/* 2번 섹션 */
+.product-3-page .type-section.alt {
+  background: #ffffff;
+}
+
+.product-3-page .type-section.alt .type-box {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(460px, 1.1fr);
+  gap: 36px;
+  align-items: center;
+
+  padding: 42px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+  border: 1px solid #e5edf6;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.06);
+}
+
+.product-3-page .type-section.alt .type-text h2 {
+  margin-bottom: 12px;
+}
+
+
+
+
+.product-3-page .type-section.alt .type-image img {
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* 세부 타이포 정리 */
+.product-3-page .type-text p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* 반응형 */
+@media (max-width: 1080px) {
+  .product-3-page .type-box-cert {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "image"
+      "cert";
+    gap: 24px;
+    padding: 34px;
+  }
+
+  .product-3-page .type-image img {
+    min-height: 420px;
+  }
+
+  .product-3-page .product-detail-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .product-3-page .type-section.alt .type-box {
+    grid-template-columns: 1fr;
+    padding: 34px;
+  }
+
+  .product-3-page .type-section.alt .type-image img {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .product-3-page .product-page section {
+    padding: 72px 0;
+  }
+
+  .product-3-page .type-box-cert,
+  .product-3-page .type-section.alt .type-box {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .product-3-page .type-cert {
+    grid-template-columns: 1fr;
+  }
+
+  .product-3-page .cert-mark {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .product-3-page .type-image img,
+  .product-3-page .type-section.alt .type-image img {
+    min-height: 280px;
+    border-radius: 20px;
+  }
+
+  .product-3-page .cert-section3 > .container {
+    padding: 26px 0 0;
+    border-top: 0;
+  }
+
+  .product-3-page .mall-title img {
+    height: 46px;
+  }
+}
+/* =========================================
+   PRODUCT 3 - 2번 디자인형 울타리 전용
+   기존 공통 .type-box 충돌 방지
+========================================= */
+
+.product-3-page .design-type-section {
+  background: #ffffff;
+}
+
+.product-3-page .design-type-section > .container {
+  max-width: 1240px;
+}
+
+.product-3-page .type-box-design {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.95fr) minmax(440px, 1.05fr);
+  gap: 42px;
+  align-items: center;
+
+  padding: 42px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  border: 1px solid #e5edf6;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.product-3-page .design-type-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-3-page .design-type-text .type-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0b5cab;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.product-3-page .design-type-text h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.product-3-page .design-type-text .type-sub {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+
+
+.product-3-page .design-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+  word-break: keep-all;
+}
+
+.product-3-page .design-type-image {
+  width: 100%;
+}
+
+.product-3-page .design-type-image img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.10);
+}
+
+
+/* 반응형 */
+@media (max-width: 980px) {
+  .product-3-page .type-box-design {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 28px;
+  }
+
+  .product-3-page .design-type-image img {
+    height: 320px;
+  }
+
+
+}
+
+@media (max-width: 640px) {
+  .product-3-page .type-box-design {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .product-3-page .design-type-image img {
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .product-3-page .design-nara-section .mall-title img {
+    height: 46px;
+  }
+}
+
+/* =========================================
+   PRODUCT 3 - 2번 섹션 grid-area 충돌 수정
+========================================= */
+
+.product-3-page .type-box-design > .design-type-text {
+  grid-area: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-3-page .type-box-design > .design-type-image {
+  grid-area: auto;
+  width: 100%;
+}
+
+.product-3-page .type-box-design > .design-type-image img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* 혹시 공통 .type-text / .type-image 영향이 남으면 확실히 차단 */
+.product-3-page .design-type-section .type-text,
+.product-3-page .design-type-section .type-image {
+  align-self: auto;
+  height: auto;
+}
+
+.gallery-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card figcaption {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 18px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.type-image figcaption{
+  margin-top: 6px;
+  margin-bottom: 12px;
+  margin-right: 18px; 
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.4;
+}
+
+
+.catalog-download-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  padding: 13px 18px;
+  border-radius: 14px;
+  background: #0b5cab;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(11, 92, 171, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.catalog-download-btn:hover {
+  background: #084887;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(11, 92, 171, 0.24);
+}
+
+/* =========================================
+   PRODUCT 3 정리본
+   - 톤 통일
+   - hover 제거
+   - 나라장터 가로배치 유지
+========================================= */
+
+.product-3-page {
+  background: #f6f8fb;
+}
+
+.product-3-page .product-page section {
+  padding: 84px 0;
+}
+
+.product-3-page .product-hero {
+  padding: 118px 0 84px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.42), rgba(15, 23, 42, 0.52)),
+    url("images/D1.jpg") center center / cover no-repeat;
+}
+
+.product-3-page .product-subnav-wrap.inside {
+  padding-top: 0;
+  margin-bottom: 24px;
+}
+
+.product-3-page .product-hero h1 {
+  font-size: clamp(40px, 5vw, 60px);
+  letter-spacing: -0.04em;
+}
+
+/* 공통 카드 톤 */
+.product-3-page .type-box-cert,
+.product-3-page .type-box-design {
+  padding: 36px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+/* 1번 섹션 */
+.product-3-page .type-box-cert {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  grid-template-areas:
+    "text image"
+    "cert image";
+  gap: 24px 40px;
+  align-items: stretch;
+}
+
+.product-3-page .type-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.product-3-page .type-number,
+.product-3-page .design-type-text .type-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #0b5cab;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.product-3-page .type-text h2,
+.product-3-page .design-type-text h2 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 3vw, 38px);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.product-3-page .type-sub,
+.product-3-page .design-type-text .type-sub {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.product-3-page .type-text p,
+.product-3-page .design-desc {
+  font-size: 16px;
+  line-height: 1.72;
+  color: #334155;
+}
+
+/* 강조문구 톤 하나로 통일 */
+.product-3-page .type-text .highlight,
+.product-3-page .design-type-text .highlight {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 11px 15px;
+  border-radius: 12px;
+  background: #f3f7fd;
+  border: 1px solid #dde8f6;
+  color: #0b5cab;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* 인증마크 */
+.product-3-page .type-cert {
+  grid-area: cert;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.product-3-page .cert-mark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  min-height: 96px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #f9fbfd;
+  border: 1px solid #e6ebf2;
+  box-shadow: none;
+  text-align: left;
+}
+
+.product-3-page .cert-mark img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: contain;
+  filter: none;
+}
+
+.product-3-page .cert-mark p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #0f172a;
+}
+
+/* 이미지 */
+.product-3-page .type-image {
+  grid-area: image;
+  height: 100%;
+}
+
+.product-3-page .type-image img,
+.product-3-page .design-type-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+  box-shadow: none;
+}
+
+/* 2번 섹션 */
+.product-3-page .design-type-section {
+  background: #ffffff;
+}
+
+.product-3-page .type-box-design {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.95fr) minmax(440px, 1.05fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.product-3-page .design-type-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-3-page .design-type-image {
+  width: 100%;
+}
+
+/* 나라장터 영역 공통 */
+.product-3-page .cert-section3,
+.product-3-page .design-nara-section {
+  background: transparent;
+  padding-top: 28px;
+  padding-bottom: 0;
+}
+
+.product-3-page .cert-section3 > .container,
+.product-3-page .design-nara-section > .container {
+  padding: 24px 0 0;
+  border-top: 1px solid #e6ebf2;
+}
+
+.product-3-page .mall-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.product-3-page .mall-title img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-3-page .product-detail-wrap {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.product-3-page .product-info {
+  border-radius: 20px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  box-shadow: none;
+}
+
+.product-3-page .product-info h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.product-3-page .product-code {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 나라장터 가로배치 유지 */
+.product-3-page .product-list.product-list-simple,
+.product-3-page .design-nara-section .product-list.product-list-simple {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.product-3-page .product-item-simple,
+.product-3-page .design-nara-section .product-item-simple {
+  flex: 1 1 0;
+  min-height: 86px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-3-page .simple-text .model-name,
+.product-3-page .design-nara-section .simple-text .model-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.product-3-page .simple-text .product-id,
+.product-3-page .design-nara-section .simple-text .product-id {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #64748b;
+}
+
+.product-3-page .simple-arrow,
+.product-3-page .design-nara-section .simple-arrow {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b5cab;
+}
+
+
+
+
+
+/* 다운로드 버튼도 차분하게 */
+.product-3-page .catalog-download-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  background: #0b5cab;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/* 반응형 */
+@media (max-width: 1080px) {
+  .product-3-page .type-box-cert,
+  .product-3-page .type-box-design {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "image"
+      "cert";
+    gap: 24px;
+    padding: 28px;
+  }
+
+  .product-3-page .type-image img,
+  .product-3-page .design-type-image img {
+    min-height: 360px;
+  }
+
+  .product-3-page .product-detail-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .product-3-page .product-page section {
+    padding: 68px 0;
+  }
+
+  .product-3-page .type-cert {
+    grid-template-columns: 1fr;
+  }
+
+  .product-3-page .product-list.product-list-simple,
+  .product-3-page .design-nara-section .product-list.product-list-simple {
+    flex-direction: column;
+  }
+
+  .product-3-page .type-image img,
+  .product-3-page .design-type-image img {
+    min-height: 260px;
+    border-radius: 18px;
+  }
+
+  .product-3-page .mall-title img {
+    height: 42px;
+  }
+}
+
+/* =========================
+   PRODUCT 2 정리본
+========================= */
+
+.product-2-page .gallery-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.product-2-page .bridge-highlight-section {
+  background: #0b5cab;
+}
+
+.product-2-page .bridge-highlight-box {
+  max-width: 860px;
+  margin: 0 auto; 
+  padding: 32px 36px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e5edf6;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+.product-2-page .bridge-highlight-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0b5cab;
+  background: #eaf3ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.product-2-page .bridge-highlight-box h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+}
+
+.product-2-page .bridge-highlight-box p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.product-2-page .section-intro {
+  margin-bottom: 26px;
+}
+
+.product-2-page .section-desc {
+  margin: 0;
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+
+
+.product-2-page .product-info-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0b5cab;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .product-2-page .bridge-highlight-box {
+    padding: 24px;
+  }
+
+  .product-2-page .bridge-highlight-box h2 {
+    font-size: 28px;
+  }
+}
+
+/* =========================================
+   PRODUCT 2 나라장터 - 현재 톤 유지하면서 PRODUCT 3처럼 정리
+========================================= */
+
+.product-2-page .bridge-nara-section {
+  background: #ffffff; /* 지금 배경 유지 */
+  padding-top: 28px;
+  padding-bottom: 100px;
+}
+
+.product-2-page .bridge-nara-section > .container {
+  padding: 24px 0 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.product-2-page .bridge-nara-section .mall-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 22px;
+}
+
+.product-2-page .bridge-nara-section .mall-title img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-2-page .bridge-nara-section .product-detail-wrap {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.product-2-page .bridge-nara-section .product-info {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: none;
+}
+
+.product-2-page .bridge-nara-section .product-info-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0b5cab;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.product-2-page .bridge-nara-section .product-info h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.product-2-page .bridge-nara-section .product-code {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 가로 배치 유지 */
+.product-2-page .bridge-nara-section .product-list.product-list-simple {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.product-2-page .bridge-nara-section .product-item-simple {
+  flex: 1 1 0;
+  min-height: 86px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-2-page .bridge-nara-section .simple-text .model-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.product-2-page .bridge-nara-section .simple-text .product-id {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #64748b;
+}
+
+.product-2-page .bridge-nara-section .simple-arrow {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b5cab;
+}
+
+.product-2-page .bridge-nara-section .catalog-download-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  background: #0b5cab;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .product-2-page .bridge-nara-section .product-detail-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .product-2-page .bridge-nara-section .product-list.product-list-simple {
+    flex-direction: column;
+  }
+
+  .product-2-page .bridge-nara-section .mall-title img {
+    height: 42px;
+  }
+}
+
+.compare-images.two strong{
+text-align: center;
+margin-top: 0;
+}
+
+
+/* 바 자체 */
+.product-subnav-wrap.hero-top .product-subnav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* 버튼 */
+.product-subnav-wrap.hero-top .product-subnav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+
+  background: #e5e7eb;
+  color: #334155;
+
+  transition: all 0.2s ease;
+}
+
+/* 구분선 */
+.product-subnav-wrap.hero-top .product-subnav-item:not(:last-child) {
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+/* 활성 */
+.product-subnav-wrap.hero-top .product-subnav-item.active {
+  background: #0b5cab;
+  color: #ffffff;
+}
+
+/* hover */
+.product-subnav-wrap.hero-top .product-subnav-item:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+/* =========================
+   PRODUCT 서브네브 - 고급형 정리본
+========================= */
+
+.product-subnav-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: 10px 0 8px;
+}
+
+.product-subnav-wrap.hero-top {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.product-subnav-wrap.hero-top .product-subnav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #eef2f7;
+  border: 1px solid #d9e2ec;
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.06),
+    0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+  padding: 0 22px;
+  margin: 0;
+  border: 0;
+  background: #f8fafc;
+  color: #334155;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item:not(:last-child) {
+  margin-right: 0;
+  padding-right: 22px;
+  border-right: 1px solid #dbe5f0;
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item:not(:last-child)::after {
+  display: none;
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item:hover {
+  background: #edf4ff;
+  color: #0b5cab;
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px rgba(11, 92, 171, 0.08);
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item.active {
+  background: linear-gradient(180deg, #0d63b8 0%, #0b5cab 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 8px 18px rgba(11, 92, 171, 0.22);
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item.active:hover {
+  background: linear-gradient(180deg, #0d63b8 0%, #0b5cab 100%);
+  color: #ffffff;
+  transform: none;
+}
+
+.product-subnav-wrap.hero-top .product-subnav-item.active::before {
+  display: none;
+}
+
+/* 차량방호책 메인 비주얼 간격도 같이 정리 */
+.product-1-page .product-hero {
+  padding: 36px 0 112px;
+  margin-top: 0;
+}
+
+/* product 2, 3도 같은 간격으로 통일하고 싶으면 같이 사용 */
+.product-2-page .product-hero,
+.product-3-page .product-hero {
+  margin-top: 0;
+}
+
+/* =========================
+   PRODUCT 1 - 서브네브/히어로 간격 최종 정리
+========================= */
+
+/* 공통 section 80px 패딩 무력화 */
+.product-page .product-subnav-section {
+  padding: 8px 0 6px !important;
+  margin: 0 !important;
+}
+
+/* 서브네브 자체 높이 살짝만 유지 */
+.product-subnav-wrap.hero-top {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 서브네브 박스 */
+.product-subnav-wrap.hero-top .product-subnav {
+  margin: 0 !important;
+}
+
+/* 버튼 높이도 살짝 줄임 */
+.product-subnav-wrap.hero-top .product-subnav-item {
+  min-height: 56px !important;
+}
+
+/* 차량방호책 메인사진: 위아래 더 넓게 */
+.product-1-page .product-hero {
+  padding: 92px 0 140px !important;
+  margin: 0 !important;
+}
+
+/* h1 때문에 위쪽이 더 떠 보이면 */
+.product-1-page .product-hero h1 {
+  margin: 0 !important;
+}
+
+/* 혹시 section 공통 패딩이 계속 끼어들면 한 번 더 차단 */
+.product-1-page .product-subnav-section,
+.product-1-page .product-hero {
+  box-sizing: border-box;
+}
+
+/*==================
+화살표
+====================*/
+.product-arrow {
+  /*background-color: red;*/
+  text-align: right;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0b5cab;
+  padding-right: 0;
+  margin-top: 0px;
+
+}
+
+.product-2-page .bridge-nara-section .product-item-simple:hover .simple-arrow {
+  color: #0b5cab !important;
+  transform: translateX(8px) !important;
+  text-shadow: 0 6px 14px rgba(11, 92, 171, 0.25);
+}
+
+.product-1-page .cert-source3 {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-1-page .cert-source3 img {
+  height: 28px;
+}
